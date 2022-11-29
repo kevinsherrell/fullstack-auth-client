@@ -8,29 +8,29 @@ import LoginPage from "./Pages/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage";
 
 function App() {
-  const router = createBrowserRouter({
-    path: "/",
-    element: <GlobalLayout/>,
-    children: [
-      {
-        path: '/',
-        element: <HomePage/>
-      },
-      {
-        path: '/login',
-        element: <LoginPage/>
-      },
-      {
-        path: '/registration',
-        element: <RegistrationPage/>
-      }
-    ]
-  })
-  return (
-    <div className="App">
-      <RouterProvider router={router}/>
-    </div>
-  );
+    const router = createBrowserRouter([{
+        path: "/",
+        element: <GlobalLayout/>,
+        children: [
+            {
+                path: '/',
+                element: <HomePage/>
+            },
+            {
+                path: '/login',
+                element: <LoginPage/>
+            },
+            {
+                path: '/registration',
+                element: <RegistrationPage/>
+            }
+        ]
+    }])
+    return (
+        <div className="App">
+            <RouterProvider router={router}/>
+        </div>
+    );
 }
 
 export default App;

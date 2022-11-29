@@ -10,7 +10,7 @@ const RegistrationPage = () => {
     const [password, setPassword] = useState("");
     const [verify, setVerify] = useState("");
     const [registerMessage, setRegisterMessage] = useState("");
-
+    console.log("verify", verify);
     return (
         <div>
             <h1>Fullstack Auth Registration Page</h1>
